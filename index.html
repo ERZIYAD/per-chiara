@@ -1,56 +1,78 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sempre Qui ❤️</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per Chiara ❤️</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="background-hearts"></div>
+    <!-- Cuori fluttuanti sullo sfondo -->
+    <div class="hearts-container" id="heartsContainer"></div>
 
-<div class="container">
+    <div class="container">
+        <header>
+            <h1>Ciao Chiara ❤️</h1>
+            <p class="subtitle">Questo piccolo posto è stato creato solo per te.</p>
+            <p class="subtitle2">Ogni volta che ne avrai bisogno, potrai tornare qui.</p>
+        </header>
 
-<h1>Ciao Chiara ❤️</h1>
+        <!-- Menu dei Bottoni -->
+        <nav class="buttons-grid">
+            <button onclick="openSection('parla')">💬 Parla con me</button>
+            <button onclick="openSection('respira')">🌬️ Respira</button>
+            <button onclick="openSection('lettere')">💌 Lettere</button>
+            <button onclick="openSection('diario')">📖 Diario</button>
+            <button onclick="openSection('ricordi')">📸 Ricordi</button>
+            <button onclick="openSection('musica')">🎵 Musica</button>
+        </nav>
 
-<p class="subtitle">
-Questo piccolo posto è stato creato solo per te.
-</p>
+        <!-- Sezioni che si aprono al click -->
+        <main class="content-sections">
+            
+            <section id="parla" class="card hidden">
+                <h2>💬 Parla con me</h2>
+                <p>Ricordati che per te ci sono sempre. Se hai bisogno di parlare, scrivimi subito su WhatsApp o chiamami!</p>
+                <a href="https://wa.me/" target="_blank" class="action-btn">Mandami un messaggio ❤️</a>
+            </section>
 
-<p class="subtitle2">
-Ogni volta che ne avrai bisogno,<br>
-potrai tornare qui.
-</p>
+            <section id="respira" class="card hidden">
+                <h2>🌬️ Un momento per respirare</h2>
+                <p>Fai un bel respiro profondo. Inspira... ed espira lentamente.</p>
+                <div class="breath-circle"></div>
+            </section>
 
-<div class="buttons">
+            <section id="lettere" class="card hidden">
+                <h2>💌 Una lettera per te</h2>
+                <p class="letter-text">
+                    "Sei la persona più speciale della mia vita. Ho creato questo posto per ricordartelo ogni singolo giorno."
+                </p>
+            </section>
 
-<button>💬 Parla con me</button>
+            <section id="diario" class="card hidden">
+                <h2>📖 Diario</h2>
+                <p>Scrivi qui un pensiero o come ti senti oggi:</p>
+                <textarea placeholder="Oggi mi sento..."></textarea>
+            </section>
 
-<button>🌬️ Respira</button>
+            <section id="ricordi" class="card hidden">
+                <h2>📸 I nostri ricordi</h2>
+                <p>Qui metteremo le nostre foto più belle insieme!</p>
+            </section>
 
-<button>💌 Lettere</button>
+            <section id="musica" class="card hidden">
+                <h2>🎵 La nostra playlist</h2>
+                <p>Una canzone per quando ti manco.</p>
+            </section>
 
-<button>📖 Diario</button>
+        </main>
 
-<button>📸 Ricordi</button>
+        <footer>
+            <p class="creator">Creato da Ziyad esclusivamente per Chiara ❤️</p>
+        </footer>
+    </div>
 
-<button>🎵 Musica</button>
-
-</div>
-
-<p class="creator">
-Creato da Ziyad esclusivamente per Chiara ❤️
-</p>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,66 +1,141 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-background:#0f0f12;
-color:white;
-padding:30px;
+body {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a4a4a;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
 }
 
-.header{
-text-align:center;
-margin-bottom:35px;
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
-.header h1{
-font-size:40px;
-margin-bottom:12px;
-color:#ff7eb6;
+h1 {
+    color: #d63384;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.header p{
-font-size:20px;
-color:#ddd;
-line-height:1.5;
-margin-bottom:15px;
+.subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.header span{
-font-size:15px;
-color:#888;
+.subtitle2 {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:1fr;
-gap:18px;
+.buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
-.card{
-background:linear-gradient(135deg,#ff5fa2,#ff94c2);
-border-radius:24px;
-padding:25px;
-color:white;
-font-size:22px;
-box-shadow:0 10px 30px rgba(255,70,150,.35);
-transition:.25s;
+button {
+    background: #ffffff;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #d63384;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.card h2{
-margin-top:10px;
-font-size:24px;
+button:hover {
+    background: #ffb6c1;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
 }
 
-.card p{
-margin-top:8px;
-font-size:16px;
-opacity:.9;
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    animation: fadeIn 0.4s ease;
 }
 
-.card:hover{
-transform:scale(1.03);
+.hidden {
+    display: none;
 }
+
+.letter-text {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+.action-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cerchio per la respirazione */
+.breath-circle {
+    width: 60px;
+    height: 60px;
+    background: #ffb6c1;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.6); opacity: 1; }
+}
+

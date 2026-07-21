@@ -1,21 +1,14 @@
-// Messaggi di conforto
-const messages = [
-  "Sono fiero di te ❤️",
-  "Un passo alla volta.",
-  "Non devi affrontare tutto da sola.",
-  "Sei importante per me.",
-  "Anche oggi ce la puoi fare.",
-  "Ti voglio un bene infinito ❤️"
-];
+function openSection(sectionId) {
+    // Nasconde tutte le sezioni
+    const sections = document.querySelectorAll('.card');
+    sections.forEach(section => {
+        section.classList.add('hidden');
+    });
 
-// Animazione quando tocchi una card
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    card.style.transform = "scale(0.96)";
-    setTimeout(() => {
-      card.style.transform = "";
-    }, 150);
+    // Mostra solo quella cliccata
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.classList.remove('hidden');
+    }
+}
 
-    alert(messages[Math.floor(Math.random() * messages.length)]);
-  });
-});

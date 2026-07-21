@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Per Chiara ❤️</title>
+    <title>Sempre Qui ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Cuori fluttuanti sullo sfondo -->
-    <div class="hearts-container" id="heartsContainer"></div>
+    <div class="background-hearts"></div>
 
     <div class="container">
-        <header>
-            <h1>Ciao Chiara ❤️</h1>
-            <p class="subtitle">Questo piccolo posto è stato creato solo per te.</p>
-            <p class="subtitle2">Ogni volta che ne avrai bisogno, potrai tornare qui.</p>
-        </header>
+
+        <h1>Ciao Chiara ❤️</h1>
+
+        <p class="subtitle">
+            Questo piccolo posto è stato creato solo per te.
+        </p>
+
+        <p class="subtitle2">
+            Ogni volta che ne avrai bisogno,<br>
+            potrai tornare qui.
+        </p>
 
         <!-- Menu dei Bottoni -->
         <nav class="buttons-grid">
@@ -31,48 +38,96 @@
         <!-- Sezioni che si aprono al click -->
         <main class="content-sections">
             
+            <!-- 1. PARLA CON ME -->
             <section id="parla" class="card hidden">
                 <h2>💬 Parla con me</h2>
-                <p>Ricordati che per te ci sono sempre. Se hai bisogno di parlare, scrivimi subito su WhatsApp o chiamami!</p>
-                <a href="https://wa.me/" target="_blank" class="action-btn">Mandami un messaggio ❤️</a>
+                <p>Ricordati che per te ci sono sempre, in qualsiasi momento della giornata.</p>
+                <p class="sub-info">Hai bisogno di me adesso?</p>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/393331234567" target="_blank" class="action-btn wa-btn">📱 Mandami un messaggio</a>
+                    <a href="tel:+393331234567" class="action-btn call-btn">📞 Chiamami subito</a>
+                </div>
             </section>
 
+            <!-- 2. RESPIRA -->
             <section id="respira" class="card hidden">
-                <h2>🌬️ Un momento per respirare</h2>
-                <p>Fai un bel respiro profondo. Inspira... ed espira lentamente.</p>
-                <div class="breath-circle"></div>
+                <h2>🌬️ Un momento per te</h2>
+                <p>Chiudi gli occhi per un secondo, rilassa le spalle e segui la sfera...</p>
+                <div class="breath-container">
+                    <div class="breath-circle"></div>
+                    <p id="breathText" class="breath-text">Inspira...</p>
+                </div>
             </section>
 
+            <!-- 3. LETTERE -->
             <section id="lettere" class="card hidden">
-                <h2>💌 Una lettera per te</h2>
-                <p class="letter-text">
-                    "Sei la persona più speciale della mia vita. Ho creato questo posto per ricordartelo ogni singolo giorno."
-                </p>
+                <h2>💌 Apri quando...</h2>
+                <p>Scegli come ti senti in questo momento:</p>
+                <div class="letter-buttons">
+                    <button class="letter-tab" onclick="showLetter('triste')">😢 Ti senti triste</button>
+                    <button class="letter-tab" onclick="showLetter('manco')">🥺 Ti manco</button>
+                    <button class="letter-tab" onclick="showLetter('ansia')">😰 Sei in ansia</button>
+                    <button class="letter-tab" onclick="showLetter('felice')">🥰 Sei felice</button>
+                </div>
+                
+                <div id="letterContent" class="letter-box hidden">
+                    <p id="letterText"></p>
+                </div>
             </section>
 
+            <!-- 4. RICORDI -->
+            <section id="ricordi" class="card hidden">
+                <h2>📸 I nostri momenti speciali</h2>
+                <p>Piccoli ricordi che porto sempre nel cuore.</p>
+                <div class="gallery">
+                    <div class="photo-card">
+                        <img src="foto1.jpg" alt="La prima volta insieme">
+                        <p>La prima volta insieme ❤️</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto2.jpg" alt="Un giorno indimenticabile">
+                        <p>Un giorno indimenticabile ✨</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="foto3.jpg" alt="Sorrisi insieme">
+                        <p>Il tuo sorriso più bello 🌹</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. MUSICA -->
+            <section id="musica" class="card hidden">
+                <h2>🎵 La nostra playlist</h2>
+                <p>Ascolta "da sola" quando vuoi sentirti vicina a me ❤️</p>
+                <iframe style="border-radius:12px; margin-top:15px;" 
+                    src="https://open.spotify.com/embed/playlist/6EeIp2sso7hzNeLmA7cFxs?utm_source=generator" 
+                    width="100%" 
+                    height="352" 
+                    frameBorder="0" 
+                    allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </section>
+
+            <!-- 6. DIARIO -->
             <section id="diario" class="card hidden">
-                <h2>📖 Diario</h2>
+                <h2>📖 Diario personale</h2>
                 <p>Scrivi qui un pensiero o come ti senti oggi:</p>
                 <textarea placeholder="Oggi mi sento..."></textarea>
             </section>
 
-            <section id="ricordi" class="card hidden">
-                <h2>📸 I nostri ricordi</h2>
-                <p>Qui metteremo le nostre foto più belle insieme!</p>
-            </section>
-
-            <section id="musica" class="card hidden">
-                <h2>🎵 La nostra playlist</h2>
-                <p>Una canzone per quando ti manco.</p>
-            </section>
-
         </main>
 
-        <footer>
-            <p class="creator">Creato da Ziyad esclusivamente per Chiara ❤️</p>
-        </footer>
+        <p class="creator">
+            Creato da Ziyad esclusivamente per Chiara ❤️
+        </p>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
+

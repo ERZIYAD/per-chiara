@@ -15,7 +15,7 @@ function openSection(sectionId) {
 // Gestione delle lettere
 const lettereTesti = {
     triste: "Se oggi le cose sembrano storte o pesanti, ricordati che è solo una giornata no. Tu sei forte, bellissima e capace di superare qualsiasi cosa. Io tifo sempre per te! ❤️",
-    manco: "Anche tu mi manchi tantissimo in questo momento! Guarda le nostre foto, ascolta la nostra canzone e pensa che presto saremo di nuovo insieme ad abbracciarci. 🫂",
+    manco: "Anche tu mi manchi tantissimo in questo momento! Ascolta la nostra canzone e pensa che presto saremo di nuovo insieme ad abbracciarci. 🫂",
     ansia: "Fermati un attimo. Fai tre respiri profondi. Non devi fare tutto subito. Risolviamo una cosa alla volta, insieme. Io sono qui con te, non sei sola. 🌸",
     felice: "Vedere il tuo sorriso è la cosa più bella del mondo! Custodisci questa felicità e ricordati di questo momento bello. Ti amo! ✨"
 };
@@ -39,3 +39,4 @@ setInterval(() => {
         }
     }
 }, 4000);
+
